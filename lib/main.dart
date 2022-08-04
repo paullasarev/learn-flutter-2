@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/pages/github_page/github_page_view.dart';
 import 'package:flutter_application_1/pages/home_page/bloc_home_page.dart';
 
 import 'data/make_blocs.dart';
@@ -46,7 +47,8 @@ class MyApp extends StatelessWidget {
               // MyHomePage(title: 'Flutter Demo Home Page'),
               BlocHomePage(title: 'Bloc Flutter Demo Home Page'),
               // Icon(Icons.directions_car),
-              Icon(Icons.directions_transit),
+              GithubPage(),
+              // Icon(Icons.directions_transit),
               Icon(Icons.directions_bike),
             ],
           ),
