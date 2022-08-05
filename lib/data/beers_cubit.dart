@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:dio/dio.dart';
-import 'package:flutter_application_1/data/beers_api.dart';
+import 'package:flutter_application_1/api/beers_api.dart';
 import 'package:logger/logger.dart';
 
 class BeersState {

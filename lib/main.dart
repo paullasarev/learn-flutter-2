@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/pages/github_page/github_page_view.dart';
-import 'package:flutter_application_1/pages/home_page/bloc_home_page.dart';
+import 'package:flutter_application_1/pages/beers_page.dart';
+import 'package:flutter_application_1/pages/count_home_page.dart';
 
+import 'components/loader/loader_view.dart';
 import 'data/make_blocs.dart';
 
 void main() {
@@ -32,27 +33,28 @@ class MyApp extends StatelessWidget {
       home: DefaultTabController(
         length: 3,
         child: Scaffold(
-          appBar: AppBar(
-            bottom: const TabBar(
-              tabs: [
-                Tab(icon: Icon(Icons.directions_car)),
-                Tab(icon: Icon(Icons.directions_transit)),
-                Tab(icon: Icon(Icons.directions_bike)),
-              ],
+            appBar: AppBar(
+              bottom: const TabBar(
+                tabs: [
+                  Tab(icon: Icon(Icons.directions_car)),
+                  Tab(icon: Icon(Icons.directions_transit)),
+                  Tab(icon: Icon(Icons.directions_bike)),
+                ],
+              ),
+              title: const Text('Tabs Demo'),
             ),
-            title: const Text('Tabs Demo'),
-          ),
-          body: const TabBarView(
-            children: [
-              // MyHomePage(title: 'Flutter Demo Home Page'),
-              BlocHomePage(title: 'Bloc Flutter Demo Home Page'),
-              // Icon(Icons.directions_car),
-              GithubPage(),
-              // Icon(Icons.directions_transit),
-              Icon(Icons.directions_bike),
-            ],
-          ),
-        ),
+            body: const LoaderView(
+              widget: TabBarView(
+                children: [
+                  // MyHomePage(title: 'Flutter Demo Home Page'),
+                  CountHomePage(title: 'Bloc Flutter Demo Home Page'),
+                  // Icon(Icons.directions_car),
+                  BeersPage(),
+                  // Icon(Icons.directions_transit),
+                  Icon(Icons.directions_bike),
+                ],
+              ),
+            )),
       ),
     );
   }

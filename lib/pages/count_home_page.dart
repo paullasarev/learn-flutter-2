@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/data/count_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class BlocHomePage extends StatelessWidget {
-  const BlocHomePage({Key? key, required this.title}) : super(key: key);
+class CountHomePage extends StatelessWidget {
+  const CountHomePage({Key? key, required this.title}) : super(key: key);
   final String title;
 
   @override
